@@ -57,6 +57,9 @@ sudo apt-get -y install nodejs bind9 bind9-host file bind9-dnsutils sqlite3 vim 
 echo "Changing permissions..."
 # add the dnskire user to the bind group
 sudo usermod -a -G bind dnskire
+mkdir dnskire/certs
+mkdir dnskire/db
+mkdir dnskire/uploads
 sudo chown -R dnskire:bind dnskire
 sudo chmod -R 775 dnskire/scripts/*.sh
 
