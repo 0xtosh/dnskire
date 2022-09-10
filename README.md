@@ -122,7 +122,7 @@ File fetchers are generated for each file:
 
   - PowerShell fetcher script
   - VBScript (use cscript.exe) fetcher script using cmd/nslookup
-  - Bash fetcher scriptusing host or dig
+  - Bash fetcher script using host or dig
   - Python3 fetcher script using python-dns
 
 Fetcher facilitators:
@@ -130,7 +130,7 @@ Fetcher facilitators:
   - DuckyScript versions for all of the above fetchers
   - Generated images with the EXIF tag "Comment" filled in with the individual payloads for all fetchers
 
-Clicking on the Fully Qualified Domain Name link will return the total list of DNS requests that are required for retrieving the file.
+Clicking on the Fully Qualified Domain Name link of the file will return the total list of DNS requests that are required for retrieving the file.
 
 ### Examples
 
