@@ -8,7 +8,7 @@ A more complete tool for file infiltration over DNS.
 
 ### What is this?
 
-dnsKIRE is a tool that allows you to serve up files over DNS by slicing and converting them into DNS TXT records. It generates four types of pre-configured fetcher scripts and other methods (e.g. DuckyScript, EXIF encoded image) to be able to retrieve the file(s) from e.g. restricted environments but where recursive DNS is possible to the Internet or where dnsKIRE can be reached. A simple web interface instruments the Bind9 DNS server configuration files using a number of shell scripts. The dedicated server running dnsKIRE will need to have a DNS subdomain delegated to it or have its IP address set as the authoritative server for your exfiltration domain(s).
+dnsKIRE is a tool that allows you to serve up files over DNS by slicing (in Japanese 切れ "kire") and converting them into DNS TXT records. It generates four types of pre-configured fetcher scripts and other methods (e.g. DuckyScript, EXIF encoded image) to be able to retrieve the file(s) from e.g. restricted environments but where recursive DNS is possible to the Internet or where dnsKIRE can be reached. A simple web interface instruments the Bind9 DNS server configuration files using a number of shell scripts. The dedicated server running dnsKIRE will need to have a DNS subdomain delegated to it or have its IP address set as the authoritative server for your exfiltration domain(s).
 
 ### Is this new?
 
