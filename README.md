@@ -230,3 +230,5 @@ Edit `scripts/mkzoneslices.sh` and adjust the `JITTERTIME` variable if the curre
 
 Written by Tom Van de Wiele during the COVID-19 pandemic lock-down. Twitter: [@0xtosh](https://twitter.com/0xtosh)
 
+CSS by [NES.css](https://nostalgic-css.github.io/NES.css/) by @BcRikko
+
