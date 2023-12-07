@@ -51,8 +51,9 @@ fi
 echo "\$nrconf{restart} = 'a';" | sudo tee -a /etc/needrestart/needrestart.conf
 
 echo "Installing required packages..."
+sudo add-apt-repository -y universe
 sudo apt-get update
-sudo apt-get -y install nodejs bind9 bind9-host file bind9-dnsutils sqlite3 vim sed coreutils npm screen exiftool
+sudo apt-get -y install curl bind9 bind9-host file bind9-dnsutils sqlite3 vim sed coreutils  screen exiftool
 
 echo "Changing permissions..."
 # add the dnskire user to the bind group
@@ -123,19 +124,23 @@ sudo openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes -keyout dnskir
 sudo chown dnskire:bind dnskire/certs/*
 
 cd dnskire
-export NPMS="node-gyp is-alphanumeric uuid express url is-valid-domain cors body-parser filesize express-fileupload sqlite3 fs path"
-for npmmodule in $(echo $NPMS | tr ' ' '\n'); 
-do 
-   sudo npm install $npmmodule
-done
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+. ~/.nvm/nvm.sh
+. ~/.profile
+. ~/.bashrc
+nvm install 16.14.0
+. ~/.nvm/nvm.sh
+. ~/.profile
+. ~/.bashrc
+npm i filesize@7.0.0 is-alphanumeric uuid express url is-valid-domain cors body-parser express-fileupload sqlite3 fs path
 
 echo 
 echo "Done!"
 echo 
+echo "Log out and in again to reload .bashrc to make nvm work."
+echo
 echo "To run as user \"dnskire\" from the dnskire/ directory:"
 echo
 echo "\$ node dnskire.js"
 echo 
 echo "Or run from a screen: \"screen -S dnskire -d -m node dnskire.js\""
-
-
